@@ -11,7 +11,7 @@ import (
 func main() {
 	var b bytes.Buffer
 	gz := gzip.NewWriter(&b)
-	if _, err := gz.Write([]byte("FixrDataHere")); err != nil {
+	if _, err := gz.Write([]byte("FixDataHere")); err != nil {
 		log.Fatal(err)
 	}
 	if err := gz.Close(); err != nil {
