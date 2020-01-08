@@ -1,12 +1,22 @@
 package main
 
 import (
+	"bytes"
+	"compress/gzip"
 	"encoding/base64"
 	"fmt"
+	"log"
 )
 
 func main() {
-	data := []byte("any + old & data")
-	str := base64.StdEncoding.EncodeToString(data)
-	fmt.Println("Fix new string",str)
+	var b bytes.Buffer
+	gz := gzip.NewWriter(&b)
+	if _, err := gz.Write([]byte("YourDataHere")); err != nil {
+		log.Fatal(err)
+	}
+	if err := gz.Close(); err != nil {
+		log.Fatal(err)
+	}
+	str := base64.StdEncoding.EncodeToString(b.Bytes())
+	fmt.Print(str)
 }
