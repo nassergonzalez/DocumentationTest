@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	fmt.Print("Super important log that requires a new branch")
 	var b bytes.Buffer
 	gz := gzip.NewWriter(&b)
 	if _, err := gz.Write([]byte("FixDataHere")); err != nil {
