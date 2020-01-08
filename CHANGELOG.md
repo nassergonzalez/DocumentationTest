@@ -1,6 +1,15 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+### Doc
+- Documentation v2
+
+### Feat
+- Super important feature
+
+### ThisCanBeAnything
+- As Long is this format
+
 
 <a name="v0.0.3"></a>
 ## [v0.0.3] - 2020-01-08
